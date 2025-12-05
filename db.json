@@ -1,0 +1,220 @@
+{
+  "styles": [
+    {
+      "id": 1,
+      "name": "High Heels",
+      "description": "Танцы на каблуках",
+      "teacher": "Vano",
+      "level": "Начинающий",
+      "color": "#ec4899"
+    },
+    {
+      "id": 2,
+      "name": "Hip-Hop",
+      "description": "Уличные танцы",
+      "teacher": "Alex",
+      "level": "Средний",
+      "color": "#8b5cf6"
+    },
+    {
+      "id": 3,
+      "name": "Twerk",
+      "description": "Энергичные движения",
+      "teacher": "Maya",
+      "level": "Продвинутый",
+      "color": "#f97316"
+    },
+    {
+      "id": 4,
+      "name": "Contemporary",
+      "description": "Современная хореография",
+      "teacher": "Kate",
+      "level": "Средний",
+      "color": "#22c55e"
+    },
+    {
+      "id": 5,
+      "name": "Breaking",
+      "description": "Брейк-данс",
+      "teacher": "Max",
+      "level": "Начинающий",
+      "color": "#0ea5e9"
+    },
+    {
+      "id": 6,
+      "name": "Jazz Funk",
+      "description": "Комбинация джаза и хип-хопа",
+      "teacher": "Liza",
+      "level": "Средний",
+      "color": "#a855f7"
+    },
+    {
+      "id": 7,
+      "name": "Vogue",
+      "description": "Модный позинг и пластика",
+      "teacher": "Diana",
+      "level": "Продвинутый",
+      "color": "#e11d48"
+    }
+  ],
+  "teachers": [
+    {
+      "id": 1,
+      "name": "Vano",
+      "specialty": "High Heels",
+      "experience": "8 лет",
+      "photo": "https://via.placeholder.com/200x200"
+    },
+    {
+      "id": 2,
+      "name": "Alex",
+      "specialty": "Hip-Hop",
+      "experience": "10 лет",
+      "photo": "https://via.placeholder.com/200x200"
+    },
+    {
+      "id": 3,
+      "name": "Maya",
+      "specialty": "Twerk",
+      "experience": "6 лет",
+      "photo": "https://via.placeholder.com/200x200"
+    },
+    {
+      "id": 4,
+      "name": "Kate",
+      "specialty": "Contemporary",
+      "experience": "7 лет",
+      "photo": "https://via.placeholder.com/200x200"
+    },
+    {
+      "id": 5,
+      "name": "Max",
+      "specialty": "Breaking",
+      "experience": "9 лет",
+      "photo": "https://via.placeholder.com/200x200"
+    },
+    {
+      "id": 6,
+      "name": "Liza",
+      "specialty": "Jazz Funk",
+      "experience": "5 лет",
+      "photo": "https://via.placeholder.com/200x200"
+    },
+    {
+      "id": 7,
+      "name": "Diana",
+      "specialty": "Vogue",
+      "experience": "6 лет",
+      "photo": "https://via.placeholder.com/200x200"
+    },
+    {
+      "id": 8,
+      "name": "Nikita",
+      "specialty": "House",
+      "experience": "4 года",
+      "photo": "https://via.placeholder.com/200x200"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Test User",
+      "email": "test@mail.ru",
+      "password": "123456"
+    },
+    {
+      "id": "c156",
+      "name": "Шнель Аня Ивановна",
+      "email": "annashnel@yandex.com",
+      "password": "123456789"
+    },
+    {
+      "id": "417c",
+      "name": "Anna Shnel",
+      "email": "annashne@yandex.com",
+      "password": "1234567"
+    }
+  ],
+  "bookings": [
+    {
+      "id": 1764920037447,
+      "userId": "59ee",
+      "classId": "2025-12-05-14:00-Hip-Hop",
+      "styleName": "Hip-Hop",
+      "teacher": "Alex",
+      "date": "пт, 5 дек.",
+      "time": "14:00",
+      "level": "Средний",
+      "bookedAt": "05.12.2025"
+    },
+    {
+      "id": 1764920038868,
+      "userId": "59ee",
+      "classId": "2025-12-05-10:00-High Heels",
+      "styleName": "High Heels",
+      "teacher": "Vano",
+      "date": "пт, 5 дек.",
+      "time": "10:00",
+      "level": "Начинающий",
+      "bookedAt": "05.12.2025"
+    },
+    {
+      "id": 1764920117662,
+      "classId": "2025-12-05-14:00-Hip-Hop",
+      "styleName": "Hip-Hop",
+      "teacher": "Alex",
+      "date": "пт, 5 дек.",
+      "time": "14:00",
+      "level": "Средний",
+      "bookedAt": "05.12.2025"
+    },
+    {
+      "id": 1764920118963,
+      "classId": "2025-12-05-18:00-Twerk",
+      "styleName": "Twerk",
+      "teacher": "Maya",
+      "date": "пт, 5 дек.",
+      "time": "18:00",
+      "level": "Продвинутый",
+      "bookedAt": "05.12.2025"
+    },
+    {
+      "id": "7db8",
+      "userId": "c156",
+      "classId": "2025-12-05-14:00-Hip-Hop",
+      "styleName": "Hip-Hop",
+      "teacher": "Alex",
+      "date": "пт, 5 дек.",
+      "time": "14:00",
+      "level": "Средний"
+    },
+    {
+      "id": "c273",
+      "classId": "2025-12-06-14:00-Hip-Hop",
+      "styleName": "Hip-Hop",
+      "teacher": "Alex",
+      "date": "сб, 6 дек.",
+      "time": "14:00",
+      "level": "Средний"
+    }
+  ],
+  "reviews": [
+    {
+      "id": 1764920049587,
+      "userId": "59ee",
+      "name": "Anna Shnel",
+      "email": "annashnel@yandex.com",
+      "text": "имииииь и",
+      "rating": 5,
+      "date": "05.12.2025"
+    },
+    {
+      "id": "2b31",
+      "name": "Anna Shnel",
+      "email": "annashne@yandex.com",
+      "text": "отри оли лоил",
+      "rating": 5,
+      "date": "05.12.2025"
+    }
+  ]
+}
