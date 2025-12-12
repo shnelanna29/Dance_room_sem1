@@ -1,4 +1,3 @@
-// src/pages/Home.jsx
 import React from 'react';
 import Banner from '../components/common/Banner';
 import StylesSlider from '../components/sliders/StylesSlider';
@@ -11,29 +10,25 @@ const Home = () => {
   const { data: reviews = [], isLoading: reviewsLoading } = useReviews();
 
   return (
-    <div>
+    <div className="page home-page">
       <Banner />
 
-      <section style={{ padding: '4rem 0' }}>
-        <div className="container">
-          <h2 className="section-title">🎭 Наши стили танцев</h2>
-          {stylesLoading && <div className="loading">Загрузка стилей...</div>}
-          {!stylesLoading && styles.length > 0 && (
-            <StylesSlider styles={styles} />
-          )}
-        </div>
+      <section className="section">
+        <h2 className="section__title">Наши стили танцев</h2>
+        {stylesLoading ? (
+          <p>Загрузка стилей...</p>
+        ) : (
+          <StylesSlider styles={styles} />
+        )}
       </section>
 
-      <section style={{ padding: '4rem 0', background: '#f1f5f9' }}>
-        <div className="container">
-          <h2 className="section-title">⭐ Отзывы учеников</h2>
-          {reviewsLoading && (
-            <div className="loading">Загрузка отзывов...</div>
-          )}
-          {!reviewsLoading && reviews.length > 0 && (
-            <ReviewsSlider reviews={reviews} />
-          )}
-        </div>
+      <section className="section">
+        <h2 className="section__title">Отзывы наших учеников</h2>
+        {reviewsLoading ? (
+          <p>Загрузка отзывов...</p>
+        ) : (
+          <ReviewsSlider reviews={reviews} />
+        )}
       </section>
     </div>
   );

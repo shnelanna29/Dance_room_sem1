@@ -1,40 +1,39 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { createContext, useContext } from 'react';
+import { useAppSelector, useAppDispatch } from '../store/hooks';
+import { setUser, clearUser } from '../store/slices/authSlice';
 
-const AuthContext = createContext();
+const AuthContext = createContext(null);
 
 export const useAuth = () => {
-  const context = useContext(AuthContext);
-  if (!context) throw new Error('useAuth must be used within AuthProvider');
-  return context;
+  const ctx = useContext(AuthContext);
+  if (!ctx) {
+    throw new Error('useAuth must be used within AuthProvider');
+  }
+  return ctx;
 };
 
 export const AuthProvider = ({ children }) => {
-  const [user, setUser] = useState(null);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    try {
-      const saved = localStorage.getItem('dance_user');
-      if (saved) setUser(JSON.parse(saved));
-    } catch {
-      localStorage.removeItem('dance_user');
-    }
-    setLoading(false);
-  }, []);
+  const dispatch = useAppDispatch();
+  const { user, loading, error } = useAppSelector((state) => state.auth);
 
   const login = (userData) => {
-    setUser(userData);
-    localStorage.setItem('dance_user', JSON.stringify(userData));
+    dispatch(setUser(userData));
   };
 
   const logout = () => {
-    setUser(null);
-    localStorage.removeItem('dance_user');
+    dispatch(clearUser());
   };
 
-  return (
-    <AuthContext.Provider value={{ user, login, logout, loading, isAuthenticated: !!user }}>
-      {!loading && children}
-    </AuthContext.Provider>
-  );
+  const value = {
+    user,
+    isAuthenticated: !!user,
+    login,
+    logout,
+    loading,
+    error,
+  };
+
+  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 };
+
+export default AuthContext;

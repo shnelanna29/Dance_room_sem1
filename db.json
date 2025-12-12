@@ -133,6 +133,12 @@
       "name": "Anna Shnel",
       "email": "annashne@yandex.com",
       "password": "1234567"
+    },
+    {
+      "id": "4d4a",
+      "name": "liza",
+      "email": "liza@mail.com",
+      "password": "123456789"
     }
   ],
   "bookings": [
@@ -169,21 +175,51 @@
       "bookedAt": "05.12.2025"
     },
     {
-      "id": "7db8",
-      "userId": "c156",
-      "classId": "2025-12-05-14:00-Hip-Hop",
-      "styleName": "Hip-Hop",
-      "teacher": "Alex",
-      "date": "пт, 5 дек.",
-      "time": "14:00",
-      "level": "Средний"
-    },
-    {
       "id": "c273",
       "classId": "2025-12-06-14:00-Hip-Hop",
       "styleName": "Hip-Hop",
       "teacher": "Alex",
       "date": "сб, 6 дек.",
+      "time": "14:00",
+      "level": "Средний"
+    },
+    {
+      "id": "f398",
+      "userId": "4d4a",
+      "classId": "2025-12-05-18:00-Twerk",
+      "styleName": "Twerk",
+      "teacher": "Maya",
+      "date": "сб, 6 дек.",
+      "time": "18:00",
+      "level": "Продвинутый"
+    },
+    {
+      "id": "dfa4",
+      "userId": "4d4a",
+      "classId": "2025-12-05-14:00-Hip-Hop",
+      "styleName": "Hip-Hop",
+      "teacher": "Alex",
+      "date": "сб, 6 дек.",
+      "time": "14:00",
+      "level": "Средний"
+    },
+    {
+      "id": "58cd",
+      "userId": "c156",
+      "classId": "2025-12-14-10:00-High Heels",
+      "styleName": "High Heels",
+      "teacher": "Vano",
+      "date": "пн, 15 дек.",
+      "time": "10:00",
+      "level": "Начинающий"
+    },
+    {
+      "id": "b2b0",
+      "userId": "c156",
+      "classId": "2025-12-14-14:00-Hip-Hop",
+      "styleName": "Hip-Hop",
+      "teacher": "Alex",
+      "date": "пн, 15 дек.",
       "time": "14:00",
       "level": "Средний"
     }
@@ -213,6 +249,51 @@
       "text": "jhvjhhjvbn",
       "rating": 5,
       "date": "05.12.2025"
+    },
+    {
+      "id": "840b",
+      "userId": "c156",
+      "name": "Шнель Аня Ивановна",
+      "email": "annashnel@yandex.com",
+      "text": "dkjbvkjkjfvb ",
+      "rating": 5,
+      "date": "10.12.2025"
+    },
+    {
+      "id": "d0fd",
+      "userId": "c156",
+      "name": "Шнель Аня Ивановна",
+      "email": "annashnel@yandex.com",
+      "text": "jkbkbk",
+      "rating": 5,
+      "date": "10.12.2025"
+    },
+    {
+      "id": "5273",
+      "userId": "c156",
+      "name": "Шнель Аня Ивановна",
+      "email": "annashnel@yandex.com",
+      "text": "vhjh",
+      "rating": 5,
+      "date": "11.12.2025"
+    },
+    {
+      "id": "9979",
+      "userId": "c156",
+      "name": "Шнель Аня Ивановна",
+      "email": "annashnel@yandex.com",
+      "text": "hvkhhn",
+      "rating": 5,
+      "date": "11.12.2025"
+    },
+    {
+      "id": "911f",
+      "userId": "c156",
+      "name": "Шнель Аня Ивановна",
+      "email": "annashnel@yandex.com",
+      "text": "kjbxc kjbxk b,x nc,\n",
+      "rating": 5,
+      "date": "13.12.2025"
     }
   ]
 }

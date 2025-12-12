@@ -1,29 +1,25 @@
-// src/api/reviewsApi.js
-const EXTERNAL_URL = 'https://jsonplaceholder.typicode.com/comments?_limit=20';
+import axios from 'axios';
+
+// внешний mock-API только для отзывов
+const API_BASE = 'https://jsonplaceholder.typicode.com';
 
 export const reviewsApi = {
-  // внешний GET для главной и ЛК (если нужно)
-  getReviews: async () => {
-    try {
-      const res = await fetch(EXTERNAL_URL);
-      if (!res.ok) {
-        throw new Error('Ошибка загрузки внешних отзывов');
-      }
-      const data = await res.json();
-
-      // Приводим к формату {id, name, rating, text, date}
-      return data.map((item, index) => ({
+  getReviews: () =>
+    axios.get(`${API_BASE}/comments?_limit=10`).then((res) =>
+      // мапим поля внешнего API к формату, который уже ожидает ReviewsSlider
+      res.data.map((item) => ({
         id: item.id,
-        userId: item.postId ?? index + 1,
-        name: item.name.split(' ')[0],
+        name: item.name,
         email: item.email,
-        rating: (index % 2) + 4, // 4–5 звёзд
         text: item.body,
-        date: new Date().toLocaleDateString('ru-RU'),
-      }));
-    } catch (e) {
-      console.error('GET внешние отзывы ошибка:', e);
-      return [];
-    }
-  },
+        rating: 5,
+        date: 'Внешний API',
+      }))
+    ),
+
+  // эти методы можно заглушить, чтобы не ломать профиль
+  updateReview: (id, review) => Promise.resolve({ ...review, id }),
+  deleteReview: (id) => Promise.resolve(),
 };
+
+export default reviewsApi;

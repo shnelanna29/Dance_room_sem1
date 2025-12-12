@@ -1,20 +1,29 @@
-const Banner = () => (
-    <section style={{
-      background: 'linear-gradient(135deg, #db2777 0%, #ec4899 100%)',
-      color: 'white',
-      padding: '5rem 0',
-      textAlign: 'center'
-    }}>
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+const Banner = () => {
+  return (
+    <section
+      style={{
+        background: 'linear-gradient(135deg, #7c3aed, #db2777)',
+        color: 'white',
+        padding: '6rem 1rem',
+        textAlign: 'center',
+      }}
+    >
       <div className="container">
-        <h1 style={{ fontSize: '3.5rem', fontWeight: '800', marginBottom: '1rem' }}>
-          Dance Room
+        <h1 style={{ fontSize: '3.5rem', marginBottom: '1rem', color: 'white' }}>
+          Танцевальная студия Dance Room
         </h1>
-        <p style={{ fontSize: '1.3rem', opacity: 0.95, maxWidth: '600px', margin: '0 auto' }}>
-          Студия современных танцев в Барнауле. Раскрой свой талант с лучшими преподавателями!
+        <p style={{ fontSize: '1.25rem', marginBottom: '2rem' }}>
+          Раскрой свой потенциал вместе с нами!
         </p>
+        <Link to="/schedule" className="gradient-btn" style={{ background: 'white', color: '#7c3aed' }}>
+          Посмотреть расписание
+        </Link>
       </div>
     </section>
   );
-  
-  export default Banner;
-  
+};
+
+export default Banner;
