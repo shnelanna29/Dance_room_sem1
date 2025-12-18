@@ -1,20 +1,20 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  reviews: [],
+  user: null,
   loading: false,
   error: null,
 };
 
-const reviewsSlice = createSlice({
-  name: 'reviews',
+const userSlice = createSlice({
+  name: 'user',
   initialState,
   reducers: {
-    setReviews(state, action) {
-      state.reviews = action.payload;
+    setUser(state, action) {
+      state.user = action.payload;
     },
-    addReview(state, action) {
-      state.reviews.push(action.payload);
+    clearUser(state) {
+      state.user = null;
     },
     setLoading(state, action) {
       state.loading = action.payload;
@@ -28,6 +28,7 @@ const reviewsSlice = createSlice({
   },
 });
 
-export const { setReviews, addReview, setLoading, setError, clearError } = reviewsSlice.actions;
+export const { setUser, clearUser, setLoading, setError, clearError } = userSlice.actions;
 
-export default reviewsSlice.reducer;
+export default userSlice.reducer;
+
